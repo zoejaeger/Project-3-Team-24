@@ -21,6 +21,7 @@ Roles:
 
 Github: https://github.com/....
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 Date:	4/06/20	
 
@@ -36,7 +37,7 @@ Tasks:
 			
       - [ALL] Complete AVC plan
       
-      -Tane - Tests all insatllations. Write test cases for the team
+      - Tane - Tests all insatllations. Write test cases for the team
       
       - X - Ensures Plan is done.
       
@@ -45,7 +46,8 @@ Tasks:
       - X - Ensure Robot is built
       
       - X - Get/save pictures from the 
-      
+  
+----------------------------------------------------------------------------------------------------------------------------------------
      
 Date:	...
 
