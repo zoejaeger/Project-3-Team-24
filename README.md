@@ -36,7 +36,7 @@ Tasks:
 			
       - [ALL] Complete AVC plan
       
-      - X - Tests all insatllations. Write test cases for the team
+      -Tane - Tests all insatllations. Write test cases for the team
       
       - X - Ensures Plan is done.
       
