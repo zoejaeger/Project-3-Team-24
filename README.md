@@ -31,7 +31,7 @@ Due date:	4 June
 
 Item due:	Testing code
 
-Conflicts:
+Conflicts: Really poor wifi at the Halls - could cut out cant upload project. Other assignments from other courses may take higher priority. A group member becoming sick could inhibit our ability to meet up as a group. 
 
 Tasks:
 			
