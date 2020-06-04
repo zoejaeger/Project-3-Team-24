@@ -43,9 +43,9 @@ Tasks:
       
       - [ALL] Help to install SFML on all team computers
       
-      - X - Ensure Robot is built
+      - Matthew, Daniel - Ensure Robot is built
       
-      - X - Get/save pictures from the 
+      -Matthew, Daniel - Get/save pictures from the 
   
 ----------------------------------------------------------------------------------------------------------------------------------------
      
@@ -73,7 +73,7 @@ Tasks:
 	
         - X - Debug hardware if Robot is not fit for the circuit
 	
-        - X - Help debug & check report, plan meetings for following week
+        - Tane - Help debug & check report, plan meetings for following week
 	
         - X - Checks code for Q1&2 enables robot to completes circuit, debug/fix if necessary
 					
