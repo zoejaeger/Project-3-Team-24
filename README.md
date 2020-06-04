@@ -61,7 +61,7 @@ Conflicts:	171 test, weekly assignments from other courses
 
 Tasks:
 	
-        - X - Determine the constant, α, for the robot wheel velocity calculations using trail and error
+        - [ALL] - Determine the constant, α, for the robot wheel velocity calculations using trail and error
 	
 	- [All] Write code so robot 11/5 1 & 2 moves through 
 	
@@ -71,11 +71,11 @@ Tasks:
 	
         - Matthew (with input from the team) - In charge of Q2 code
 	
-        - X - Debug hardware if Robot is not fit for the circuit
+        - Daniel, Zoe - Debug hardware if Robot is not fit for the circuit
 	
         - Tane - Help debug & check report, plan meetings for following week
 	
-        - X - Checks code for Q1&2 enables robot to completes circuit, debug/fix if necessary
+        - [ALL] - Checks code for Q1&2 enables robot to completes circuit, debug/fix if necessary
 					
 
 
