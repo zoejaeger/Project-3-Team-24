@@ -23,7 +23,7 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Date:	4/06/20	
+Start date:	4 June	
 
 Objectives:	Start the Project
 
@@ -39,9 +39,9 @@ Tasks:
       
       - Tane - Tests all insatllations. Write test cases for the team
       
-      - X - Ensures Plan is done.
+      - Zoe - Ensures Plan is done.
       
-      - Help to install SFML on all team computers
+      - [ALL] Help to install SFML on all team computers
       
       - X - Ensure Robot is built
       
@@ -49,7 +49,7 @@ Tasks:
   
 ----------------------------------------------------------------------------------------------------------------------------------------
      
-Date:	...
+State date:	4 June
 
 Objectives:	Core and Completion
 
@@ -57,17 +57,19 @@ Due date:	11 June
 
 Item due:	Core code
 
-Conflicts:	171 test
+Conflicts:	171 test, weekly assignments from other courses
 
 Tasks:
 	
-        - [All] Write code so robot 11/5 1 & 2 moves through 
+        - X - Determine the constant, α, for the robot wheel velocity calculations using trail and error
+	
+	- [All] Write code so robot 11/5 1 & 2 moves through 
 	
 	- [All] Intro & Background for report progress report started
 	
-        - X - In charge of Q1 code
+        - Matthew (with input from the team) - In charge of Q1 code
 	
-        - X - In charge of Q2 code
+        - Matthew (with input from the team) - In charge of Q2 code
 	
         - X - Debug hardware if Robot is not fit for the circuit
 	
