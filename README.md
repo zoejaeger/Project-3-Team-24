@@ -19,7 +19,7 @@ Roles:
 	- Zoe - Software writing, testing and documentation (debugging software and committing to git, writing test cases and documenting performance against milestones)
 	- Daniel - Software writing, testing and documentation (debugging software and committing to git, writing test cases and documenting performance against milestones)
 
-Github: https://github.com/....
+Github: https://github.com/zoejaeger/Project-3-Team-24
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
