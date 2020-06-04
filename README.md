@@ -31,7 +31,7 @@ Due date:	4 June
 
 Item due:	Testing code
 
-Conflicts:	102 Test
+Conflicts:
 
 Tasks:
 			
