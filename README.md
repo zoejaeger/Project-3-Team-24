@@ -24,10 +24,15 @@ Github: https://github.com/....
 
 
 Date:	4/06/20	
+
 Objectives:	Start the Project
+
 Due date:	4 June
+
 Item due:	Testing code
+
 Conflicts:	102 Test
+
 Tasks:
 			- [All] Complete AVC plan
       - X - Tests all insatllations. Write test cases for the team
@@ -36,11 +41,17 @@ Tasks:
       - X - Ensure Robot is built
       - X - Get/save pictures from the 
       
+     
 Date:	...
+
 Objectives:	Core and Completion
+
 Due date:	11 June
+
 Item due:	Core code
+
 Conflicts:	171 test
+
 Tasks:
 				- [All] Write code so robot 11/5 1 & 2 moves through
         - [All] Intro & Background for report progress report started
