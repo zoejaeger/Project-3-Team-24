@@ -1,18 +1,18 @@
-AVC Plan
+**AVC Plan**
 
-Team Name: Team 24
+**Team Name:** Team 24
 
-Team Members & contact info: 
+**Team Members & contact info:** 
 
 	- Matthew Cavill
 	- Daniel Peploe
 	- Tane Thomas
 	- Zoe Jaeger-Letts
 
-Communication tool:
+**Communication tools:**
  Google doc, Facebook, Discord
  
-Roles:
+**Roles**:
 	
 	- Tane - Project Manager (organising team meetings, reporting regularly on progress)
 	- Matthew - Software Architect (writing core code and extending functionality)
@@ -23,17 +23,17 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Start date:	4 June	
+**Start date:**	4 June	
 
-Objectives:	Start the Project
+**Objectives:**	Start the Project
 
-Due date:	4 June
+**Due date:**	4 June
 
-Item due:	Testing code
+**Item due:**	Testing code
 
-Conflicts: Really poor wifi at the Halls - could cut out cant upload project. Other assignments from other courses may take higher priority. A group member becoming sick could inhibit our ability to meet up as a group. 
+**Conflicts:** Really poor wifi at the Halls - could cut out cant upload project. Other assignments from other courses may take higher priority. A group member becoming sick could inhibit our ability to meet up as a group. 
 
-Tasks:
+**Tasks:**
 			
       - [ALL] Complete AVC plan
       
@@ -49,17 +49,17 @@ Tasks:
   
 ----------------------------------------------------------------------------------------------------------------------------------------
      
-State date:	4 June
+**State date:**	4 June
 
-Objectives:	Core and Completion
+**Objectives:**	Core and Completion
 
-Due date:	11 June
+**Due date:**	11 June
 
-Item due:	Core code
+**Item due:**	Core code
 
-Conflicts:	171 test, weekly assignments from other courses
+**Conflicts:**	171 test, weekly assignments from other courses
 
-Tasks:
+**Tasks:**
 	
         - [ALL] - Determine the constant, α, for the robot wheel velocity calculations using trail and error
 	
