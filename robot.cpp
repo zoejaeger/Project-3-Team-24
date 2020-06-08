@@ -14,7 +14,7 @@ int main(){
 		double vRight = 10.0;
 		double d = 1.8; // placeholder constant for turning
 		std::vector<int> whiteLine; //white pixel horizontal index
-    whiteLine.reserve(4); // stops segmentation fault error by reserving memory manually.
+    		whiteLine.reserve(4); // stops segmentation fault error by reserving memory manually.
 		
 
 		for (int i = 0; i < 150; i++) { // image is 150px wide
@@ -36,7 +36,7 @@ int main(){
 			}
 		}
 
-  // There are 4 white pixels and to be in the centre they need to be at 73,74,75,76.
+  		// There are 4 white pixels and to be in the centre they need to be at 73,74,75,76.
   
 		if (whiteLine.size() == 0)  {
 			vRight = vRight;
