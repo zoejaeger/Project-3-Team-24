@@ -34,6 +34,7 @@ int main(){
 			if (isWhite == 1){
 				//std::cout << i <<std::endl;
 				whiteLine.push_back(i); //Adds each white pixel index to the vector 
+			}
 		}
 		// There are 4 white pixels and to be in the centre they need to be at 73,74,75,76.
 		if (whiteLine[0] < 73){    //white line moving to the left
