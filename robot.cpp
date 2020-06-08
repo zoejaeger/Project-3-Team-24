@@ -17,6 +17,7 @@ int main(){
 		double vRight = 5.0;
 		double d = 1.1; //placeholder constant for turning
 		std::vector<int> whiteLine; //white pixel horizontal index
+	    	whiteLine.reserve(4); // stops segmentation fault error by reserving memory manually. 
 	    
 		for (int i = 0; i < 150; i++) { // image is 150px wide
 			int pix = get_pixel(cameraView, 50, i, 3); // 50 is in the middle of the camera view
@@ -36,6 +37,11 @@ int main(){
 				whiteLine.push_back(i); //Adds each white pixel index to the vector 
 		}
 		// There are 4 white pixels and to be in the centre they need to be at 73,74,75,76.
+			
+		if (whiteLine.size() == 0)  {  //continue robot straight if white pixels not found
+			vRight = vRight;
+			vLeft = vLeft;
+		}
 		if (whiteLine[0] < 73){    //white line moving to the left
 			vRight = vRight * d; //turn robot left
 		}
