@@ -6,7 +6,6 @@
 
 	- Matthew Cavill
 	- Daniel Peploe
-	- Tane Thomas
 	- Zoe Jaeger-Letts
 
 **Communication tools:**
@@ -14,10 +13,10 @@
  
 **Roles**:
 	
-	- Tane - Project Manager (organising team meetings, reporting regularly on progress)
+	- Daniel - Project Manager (organising team meetings, reporting regularly on progress)
 	- Matthew - Software Architect (writing core code and extending functionality)
 	- Zoe - Software writing, testing and documentation (debugging software and committing to git, writing test cases and documenting performance against milestones)
-	- Daniel - Software writing, testing and documentation (debugging software and committing to git, writing test cases and documenting performance against milestones)
+	
 
 Github: https://github.com/zoejaeger/Project-3-Team-24
 
@@ -37,7 +36,7 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
 			
       - [ALL] Complete AVC plan
       
-      - Tane - Tests all insatllations. Write test cases for the team
+      -Daniel - Tests all insatllations. Write test cases for the team
       
       - Zoe - Ensures Plan is done.
       
@@ -45,7 +44,8 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
       
       - Matthew, Daniel - Ensure Robot is built
       
-      -Matthew, Daniel - Get/save pictures from the 
+      -Matthew, Daniel - Get/save pictures from the robot
+      
   
 ----------------------------------------------------------------------------------------------------------------------------------------
      
@@ -77,5 +77,71 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
 	
         - [ALL] - Checks code for Q1&2 enables robot to completes circuit, debug/fix if necessary
 					
+----------------------------------------------------------------------------------------------------------------------------------------
+
+**State date:** 12/06/2020
+
+**Objectives:** Completion and Core testing
+
+**Due date:** 15/06/2020
+
+**Item due:** Completion code 
+
+**Conflicts:** ENGR 121 Test, Comp 102/112 assignment, ENGR 141 test
+
+**Tasks:**
+
+	  - Zoe, Matthew Completion code and debug
+	  
+	  - Daniel, Zoe Testing for Core code
+	  
+	  - Daniel Milestones in plan, installation steps, 
+	  
+----------------------------------------------------------------------------------------------------------------------------------------
+
+**Start date:** 15/06/2020
+
+**Objectives:** Challenge and Completion testing 
+
+**Due date:** 18/06/2020
+
+**Item Due:** Challenge Code and COmpletion Testing
+
+**Conflicts:** ENGR 121 test, ENGR 141 test, CYBR 171 test
+
+**Tasks:**
+
+	 - Matthew, Zoe Challenge Code
+	 
+	 - Zoe, Daniel Testing for Completion code
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+**Start date:** 15/06/2020
+
+**Objectives:** Challenge testing 
+
+**Due date:** 18/06/2020
+
+**Item Due:** Challenge Testing
+
+**Conflicts:** ENGR 141 test, CYBR 171 test
+
+**Tasks:** 
+
+	 - Daniel Zoe Matthew Challenge testing
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
