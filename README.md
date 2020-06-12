@@ -9,7 +9,7 @@
 	- Zoe Jaeger-Letts
 
 **Communication tools:**
- Google doc, Facebook, Discord
+ Discord
  
 **Roles**:
 	
