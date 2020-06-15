@@ -41,16 +41,18 @@ int main(){
 		for (int i = 0; i < 150; i++) { // image is 150px wide
 			int pix = get_pixel(cameraView, 81, i, 3); // 50 is in the middle of the camera view
 			int isWhite;
+			
 			if (pix > 250){
 				isWhite = 1;
 			} else {
 				isWhite = 0;
 			}
+			
 			std::cout<<isWhite<<" ";
             
-           		if (isWhite == 1){ 
+			if (isWhite == 1){ 
 				scanAhead.push_back(i);
-				}
+			}
 
 		}
 
@@ -67,11 +69,12 @@ int main(){
 		if (whiteLine[3] > 76) { // white line moving to the right
 			vLeft = vLeft * d; // turn robot right
 		}
-		if (whiteLine.size() > 4 && whiteLine[3] > 76){ // 90 degree right turn detection
-			vLeft = vLeft * 3 * d; //turn robot right sharply
-		
-		} else if (whiteLine.size() > 4 && whiteLine[0] < 73){ // 90 degree left turn detection
-			vRight = vRight * 3 * d; //turn robot left sharply
+		if (whiteLine.size() > 4 && scanAhead.size() > 4) {
+			if (whiteLine[3] > 76){ // 90 degree right turn detection
+				vLeft = vLeft * 2 * d; //turn robot right sharply
+			} else if (whiteLine[0] < 73){ // 90 degree left turn detection
+				vRight = vRight * 2 * d; //turn robot left sharply
+			}
 		} 		
 		
 		setMotors(vLeft,vRight);   
