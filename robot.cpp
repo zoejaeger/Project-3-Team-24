@@ -18,6 +18,103 @@ int main(){
 		
 	    	std::vector<int> scanAhead; // adds extra scanning of white pixels for when there is a slight gap in the path
 		scanAhead.reserve(4); 
+	    
+	    	std::vector<int> redWall; // primary red pixel horizontal index
+		redWall.reserve(150);
+		
+		std::vector<int> gapScan;
+		gapScan.reserve(14); 
+		
+		std::vector<int> redAhead; 
+		redAhead.reserve(14);
+		
+		//RED, CHALLENGE
+		for (int i = 0; i < 150; i++) { // image is 150px wide
+			int pix = get_pixel(cameraView, 65, i, 0); // 50 is in the middle of the camera view
+			
+			int isRed;
+			
+			if (pix > 250) {
+				isRed = 1;
+			} else {
+				isRed = 0;
+			} 
+			//std::cout<<isRed<<"";
+			
+			if (isRed == 1) {
+				std::cout<< i <<std::endl;
+				redWall.push_back(i); //Adds each red pixel index to the redWall vector
+			} 
+		}
+		
+		for (int i = 0; i < 150; i++) { // image is 150px wide
+			int pix = get_pixel(cameraView, 95, i, 0); // 50 is in the middle of the camera view
+			
+			int isRed;
+			
+			if (pix > 250) {
+				isRed = 1;
+			} else {
+				isRed = 0;
+			} 
+			//std::cout<<isRed<<"";
+			
+			if (isRed == 1) {
+				std::cout << "GAP INDEX: " << i << std::endl; 
+				gapScan.push_back(i); //Adds each red pixel index to the gapScan vector
+			} 
+		}
+		
+		for (int i = 0; i < 150; i++) { // image is 150px wide
+			int pix = get_pixel(cameraView, 20, i, 0); // 50 is in the middle of the camera view
+			
+			int isRed;
+			
+			if (pix > 250) {
+				isRed = 1;
+			} else {
+				isRed = 0;
+			} 
+			//std::cout<<isRed<<"";
+			
+			if (isRed == 1) {
+				 
+				redAhead.push_back(i); //Adds each red pixel index to the redAhead vector
+			} 
+		}
+		 
+		if (redWall.size() > 30 && gapScan[0] < 75 && redWall[75] >=75 && redWall[75] < 80 ) {
+			vLeft = vLeft*16.87;
+			vRight = vRight * 0; 
+		}
+		if (redWall.size() > 30 && gapScan.back() > 75 && redWall[75] >=75 && redWall[75] < 80){
+			vLeft = vLeft * 0;
+			vRight = vRight * 16.87;
+			
+		}
+		if (redWall.size() > 30 && gapScan[0] < 75 && gapScan.back() > 75 && redWall[75] >=75 && redWall[75] < 80){
+			vLeft = vLeft * 0;
+			vRight = vRight * 16.87 *2;
+		
+		}
+		if (redWall.size() <= 30){
+			vLeft = vLeft;
+			vRight = vRight; 
+		} 
+		if (redWall.size() == 0 && redAhead.size() > 1 && redAhead.size() <= 15){
+			vLeft = vLeft* 8.435;
+			vRight = vRight * 0;
+		} 
+		if (redWall.size() > 30 && gapScan.size() == 0){
+			vLeft = vLeft * 16.87;
+			vRight = vRight * 0;
+		}
+		
+		std::cout <<"RED PIXEL SIZE: " << redWall.size() << std::endl;
+	    
+	    
+	    	// CORE / COMPLETION 
+	    	/* commented out for now till only red pixels are detected for code above
 
 		for (int i = 0; i < 150; i++) { // image is 150px wide
 			int pix = get_pixel(cameraView, 80, i, 3); // 50 is in the middle of the camera view
@@ -76,7 +173,7 @@ int main(){
 				vRight = vRight * 2 * d; //turn robot left sharply
 			}
 		} 		
-		
+		*/
 		setMotors(vLeft,vRight);   
 		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
 		usleep(10000);
