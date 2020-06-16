@@ -25,6 +25,26 @@ void redScanner(int column, std::vector<int> &redPixScanner){ // detects red pix
 		}
 }
 
+void whiteScanner(int column, std::vector<int> &whitePixScanner){ // detects white pixels and then adds their horizontal index to a vector
+	for (int i = 0; i < 150; i++) { // image is 150px wide
+			int pix = get_pixel(cameraView, column, i, 3); // 50 is in the middle of the camera view
+			
+			int isWhite;
+			int whiteIndex;
+			
+			if (pix > 250) {
+				isWhite = 1;
+			} else {
+				isWhite = 0;
+			} 
+			std::cout<<isWhite<<" ";
+			
+			if (isWhite == 1) {
+				whitePixScanner.push_back(i); //Adds each white pixel index to the vector
+			}
+		}
+}
+
 int main(){
 	if (initClientRobot() !=0){
 		std::cout<<" Error initializing robot"<<std::endl;
@@ -89,47 +109,14 @@ int main(){
 	    
 	    	// CORE / COMPLETION 
 	    	/* commented out for now till only red pixels are detected for code above
-
-		for (int i = 0; i < 150; i++) { // image is 150px wide
-			int pix = get_pixel(cameraView, 80, i, 3); // 50 is in the middle of the camera view
-			
-			int isWhite;
-			int whiteIndex;
-			
-			if (pix > 250) {
-				isWhite = 1;
-			} else {
-				isWhite = 0;
-			} 
-			std::cout<<isWhite<<" ";
-			
-			if (isWhite == 1) {
-				//std::cout<< i <<std::endl;
-				whiteLine.push_back(i); //Adds each white pixel index to the vector
-			}
-		}
+		whiteScanner(80, whiteLine);
+	    	whiteScanner(81, scanAhead);
 		
-		for (int i = 0; i < 150; i++) { // image is 150px wide
-			int pix = get_pixel(cameraView, 81, i, 3); // 50 is in the middle of the camera view
-			int isWhite;
-			
-			if (pix > 250){
-				isWhite = 1;
-			} else {
-				isWhite = 0;
-			}
-			
-			std::cout<<isWhite<<" ";
-            
-			if (isWhite == 1){ 
-				scanAhead.push_back(i);
-			}
-
-		}
+		
 
   		// There are 4 white pixels and to be in the centre they need to be at 73,74,75,76.
   
-		if (whiteLine.size() == 0 && scanAhead.size() == 0)  {  //(if no white pixels ) turn robot around to try again
+		if ((whiteLine.size() == 0 && scanAhead.size() == 0) || (whiteLine.size() > 50 && scanAhead.size() > 50))  {  //(if no white pixels ) or (if approaching white image) turn robot around to try again 
 			vRight = -1 * vRight;
 			vLeft = vLeft;
 		}	
