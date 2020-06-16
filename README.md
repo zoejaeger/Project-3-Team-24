@@ -36,7 +36,7 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
 			
       - [ALL] Complete AVC plan
       
-      -Daniel - Tests all insatllations. Write test cases for the team
+      - Daniel - Tests all insatllations. Write test cases for the team
       
       - Zoe - Ensures Plan is done.
       
@@ -44,7 +44,7 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
       
       - Matthew, Daniel - Ensure Robot is built
       
-      -Matthew, Daniel - Get/save pictures from the robot
+      - Matthew, Daniel - Get/save pictures from the robot
       
   
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@ Github: https://github.com/zoejaeger/Project-3-Team-24
 
 **Item due:** Completion code 
 
-**Conflicts:** ENGR 121 Test, Comp 102/112 assignment, ENGR 141 test
+**Conflicts:** ENGR 121 Test, Comp 102/112 assignment, ENGR 141 test, Three members as Tane dropped out
 
 **Tasks:**
 
