@@ -2,6 +2,29 @@
 FILE _iob[] = {*stdin, *stdout, *stderr};extern "C" FILE * __cdecl __iob_func(void){    return _iob;}  // remove this fix before submitting 
 
 #include "robot.hpp"
+
+void redScanner(int column, std::vector<int> &redPixScanner){ // detects red pixels and then adds their horizontal index to a vector
+	for (int i = 0; i < 150; i++) { // image is 150px wide
+			 
+			int pix = get_pixel(cameraView, column, i, 0); 
+			
+			int isRed;
+			
+			if (pix > 250) {
+				isRed = 1;
+			} else {
+				isRed = 0;
+			} 
+			//std::cout<<isRed<<"";
+			
+			if (isRed == 1) {
+				std::cout<<  i <<std::endl;
+				redPixScanner.push_back(i); //Adds each red pixel index to the redWall vector
+			} 
+			
+		}
+}
+
 int main(){
 	if (initClientRobot() !=0){
 		std::cout<<" Error initializing robot"<<std::endl;
@@ -28,61 +51,12 @@ int main(){
 		std::vector<int> redAhead; 
 		redAhead.reserve(14);
 		
-		//RED, CHALLENGE
-		for (int i = 0; i < 150; i++) { // image is 150px wide
-			int pix = get_pixel(cameraView, 65, i, 0); // 50 is in the middle of the camera view
-			
-			int isRed;
-			
-			if (pix > 250) {
-				isRed = 1;
-			} else {
-				isRed = 0;
-			} 
-			//std::cout<<isRed<<"";
-			
-			if (isRed == 1) {
-				std::cout<< i <<std::endl;
-				redWall.push_back(i); //Adds each red pixel index to the redWall vector
-			} 
-		}
+	    	
+	        redScanner(65, redWall);
+		redScanner(95, gapScan);
+		redScanner(20, redAhead);
 		
-		for (int i = 0; i < 150; i++) { // image is 150px wide
-			int pix = get_pixel(cameraView, 95, i, 0); // 50 is in the middle of the camera view
-			
-			int isRed;
-			
-			if (pix > 250) {
-				isRed = 1;
-			} else {
-				isRed = 0;
-			} 
-			//std::cout<<isRed<<"";
-			
-			if (isRed == 1) {
-				std::cout << "GAP INDEX: " << i << std::endl; 
-				gapScan.push_back(i); //Adds each red pixel index to the gapScan vector
-			} 
-		}
 		
-		for (int i = 0; i < 150; i++) { // image is 150px wide
-			int pix = get_pixel(cameraView, 20, i, 0); // 50 is in the middle of the camera view
-			
-			int isRed;
-			
-			if (pix > 250) {
-				isRed = 1;
-			} else {
-				isRed = 0;
-			} 
-			//std::cout<<isRed<<"";
-			
-			if (isRed == 1) {
-				 
-				redAhead.push_back(i); //Adds each red pixel index to the redAhead vector
-			} 
-		}
-		 
 		if (redWall.size() > 30 && gapScan[0] < 75 && redWall[75] >=75 && redWall[75] < 80 ) {
 			vLeft = vLeft*16.87;
 			vRight = vRight * 0; 
