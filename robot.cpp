@@ -121,7 +121,6 @@ void completeRedMaze(double &vLeft, double &vRight){
 		
 		std::cout <<"RED PIXEL SIZE: " << redWall.size() << std::endl;
 	    
-	
 }
 
 
@@ -129,6 +128,11 @@ int main(){
 	if (initClientRobot() !=0){
 		std::cout<<" Error initializing robot"<<std::endl;
 	}
+	
+	// ask a user which program to run (Core, Completion or Challenge) and store their answer as "mode" - either 1, 2, or 3
+	int mode;
+	std::cout<< "Please select a mode: \nCore: enter '1' \nCompletion: enter '2' \nChallenge: enter '3'\n";
+	std::cin>> mode;
         
     while(1){
 		takePicture();
@@ -136,10 +140,13 @@ int main(){
 		double vLeft = 10.0;
 		double vRight = 10.0;
 		
-		//followWhitePath(vLeft, vRight);
 		
-		completeRedMaze(vLeft, vRight); 
-	    	
+		
+		if (mode == 1 || mode == 2) { // core and completion 		 
+			followWhitePath(vLeft, vRight);
+		} else if (mode == 3) { // challenge
+			completeRedMaze(vLeft, vRight); 
+		} 
 	        
 		setMotors(vLeft,vRight);   
 		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
@@ -149,3 +156,6 @@ int main(){
   } //while
 
 } // main
+
+
+
