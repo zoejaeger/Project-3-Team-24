@@ -1,5 +1,7 @@
 void completeRedMaze(double &vLeft, double &vRight){
-	double a = 16.87; //ninetyDegreeTurnConstant
+	vLeft = vLeft * 2; // double the normal speeds since the challenge maze is longer
+	vRight = vRight * 2;
+	double a = 8.435; //ninetyDegreeTurnConstant
 	
 	std::vector<int> redWall; // primary red pixel horizontal index
 	redWall.reserve(150);
