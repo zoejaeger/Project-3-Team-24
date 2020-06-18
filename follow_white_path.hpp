@@ -1,19 +1,25 @@
 void followWhitePath(double &vLeft, double &vRight){
+	double d = 1.8; // placeholder constant for turning.
 	
-	double d = 1.8; // placeholder constant for turning
-	std::vector<int> whiteLine; //white pixel horizontal index
-    whiteLine.reserve(4); // stops segmentation fault error by reserving memory manually.
+	std::vector<int> whiteLine; //white pixel horizontal index.
+    	whiteLine.reserve(4); // stops segmentation fault error by reserving memory manually.
 		
-	std::vector<int> scanAhead; // adds extra scanning of white pixels for when there is a slight gap in the path
+	std::vector<int> scanAhead; //adds another layer to the primary white pixel horizontal index.
 	scanAhead.reserve(4); 
 	
-	whiteScanner(80, whiteLine);
-	whiteScanner(81, scanAhead);
+	std::vector<int> confirmNoWhite; // frontline white pixel horizontal index
+	confirmNoWhite.reserve(4); 	
 	
-	if ((whiteLine.size() == 0 && scanAhead.size() == 0) || (whiteLine.size() > 50 && scanAhead.size() > 50))  {  //(if no white pixels ) or (if approaching white image) turn robot around to try again 
+	whiteScanner(80, whiteLine); // primary scanner 
+	whiteScanner(81, scanAhead); // adds extra scanning of white pixels for when there is a slight gap in the path
+	whiteScanner(50, confirmNoWhite); // Confirms that there are no white pixels ahead to stop the robot turning around prematurely
+	
+	//(if no white pixels ) or (if approaching white image) turn robot around to try again 
+	if ((whiteLine.size() == 0 && scanAhead.size() == 0) || (whiteLine.size() > 50 && scanAhead.size() > 50))  { 
 			vRight = -1 * vRight;
 			vLeft = vLeft;
-	}	
+	}
+	
 	if (whiteLine[0] < 73) { // white line moving to the left
 			vRight = vRight * d; // turn robot left
 
