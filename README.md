@@ -185,3 +185,143 @@ First we will set up Geany, then afterwards we will install and set up the MinGW
 1. Now, without clicking anything else, type “geany” using your computer’s keyboard. You should immediately see a result for your search: the Geany App.
 
 1. Double click the Geany App underneath the “Best match” heading. This will launch Geany with a blank file. You can close Geany now if you wish, by clicking the red “X” at the top right-hand side of the Geany program. Now we can move on to installing MinGW, our compiler we will use with Geany.
+
+**MinGW install**
+DO THIS AFTER YOU HAVE INSTALLED GEANY
+1.	Follow this link (https://www.sfml-dev.org/download/sfml/2.5.1/ ) and click the link in the beige box labelled MinGWBuilds 7.3.0 (32-bit)
+ 
+2.	Your download will start
+ 
+3.	if you don’t already have 7Zip installed follow this link(https://www.7-zip.org/download.html ), and click on the first link labelled as download. Otherwise skip to step 6
+ 
+4.	When this has downloaded open your file explorer and open your downloads folder.
+ 
+Run the file named 7z1900
+ 
+5.	When this is run a dialog box will open. Simply click install
+ 
+6.	Click on the magnifiying glass in the bottom right hand corner of your screen and search for 7Zip click on the file named 7-Zip File Manager
+ 
+7.	Once the app is opened scroll down until you find the file named “i686-7.3.0-release-posix-dwarf-rt_v5-rev0.7z”
+ 
+8.	Click on this file and select extract
+ 
+9.	A dialog window should open with an address bar and a button with three dots on it ( … )
+ 
+10.	Click the button with three dots on it and navigate to the “OS (C:)” select it so it expands a list below it
+ 
+11.	Click the make a new folder button and name it MinGW. A folder should appear under the (C:)  
+12.	Then click OK
+13.	Open the file explorer and open the OS tab on the left
+ 
+14.	Inside the OS click on the file named MinGW and open the folder inside it and navigate to the file named bin Right click on the address bar and select copy address as text
+ 
+15.	Click on the Magnifying glass in the bottom left of your screen and search for “environment variables”. Open the top link with the computer monitor icon
+
+16.	Once you have opened this a window will pop up with four buttons on the right hand side three will be labelled “Settings”, but the bottom one will be “environment variables”
+ 
+17.	A new window will pop up. In the top half there will be a list of words. Click on “path” then click on the edit button below the box.
+ 
+18.	Click the New button and then paste in the address copied from the bin folder. You can paste by pressing ctrl+V on the keyboard 
+19.	Click OK
+20.	Open Geany and click new 
+
+21.	Save this file in any folder as test.cpp
+
+22.	Click the arrow next to build and select set build commands
+ 
+23.	Click make and write in mingw32-make
+ 
+This is now finished
+
+
+**Install AVC**
+Read the pdf file called “instructions_AVC.pdf” for diagrams of each step.
+1.	Follow this link and download AVC_Win10.zip under the attachments menu at the bottom of the page.
+ 
+2.	In your documents folder on your computer create a new folder called AVC
+ 
+3.	Right click on the AVC_Win10.zip folder in your downloads folder.
+ 
+4.	A window will appear say to select a destination. Click on browse and navigate to the new AVC folder in your documents.
+ 
+5.	Click extract.
+ 
+6.	Once this is done open the AVC_Win10 folder in the AVC folder in your document folder.
+ 
+7.	Go to the github (https://github.com/zoejaeger/Project-3-Team-24 ) and click the green button labelled Clone or download
+ 
+8.	Click Download ZIP
+ 
+9.	Right click on the new zip folder in your downloads called Project-3-Team-24-master.zip and click extract all.
+ 
+10.	A window will appear say to select a destination. Click on browse and navigate to the AVC folder in your documents.
+ 
+11.	Click extract
+
+
+12.	Right click the new file and open it
+ 
+13.	Hold control and click on the files named; complete_red_maze.hpp, follow_white_path.hpp, pixel_scanners.hpp, and robot.cpp and then while still holding control right click on one of them and select copy. Release control key.
+ 
+14.	Go to the folder called AVC_robot, right click and select paste from the drop down menu.
+ 
+15.	A dialog box will open and say the destination already has a file named “robot.cpp”. click replace the file in the destination.
+ 
+16.	Congratulation the AVC robot is now installed. Now you need to download and install SFML library.
+
+SFML install
+ONLY DO THIS IF YOU HAVE ALREADY DOWNLOADED AND SETUP THE AVC FILES, MINGW, AND GEANY
+1.	Go to the following link (https://www.sfml-dev.org/download/sfml/2.5.1/ ) and click on the button labelled download to the right of “GCC 7.3.0 MinGW (DW2) - 32-bit”. On the button it should say 15.5MB
+ 
+2.	Once the file has downloaded open your downloads folder in your file explorer on your computer. And find the file named SFML-2.5.1-windows-gcc-7.3.0-minggw-32-bit.zip
+
+3.	Right click on that file and click on extract in the menu
+ 
+
+4.	This will open a window saying to select a destination. Click on browse and navigate to the AVC folder in your documents.
+ 
+5.	Click extract
+ 
+6.	 Go to the AVC folder and open the SFML-2.5.1 folder
+
+7.	Go to the AVC_robot folder and open the file named “makefile” with geany
+ 
+8.	Once opened delete all the lines in there and replace it with this code:
+
+INCLUDE = -I 
+LIBS = -L 
+robot.exe: robot.o 
+	g++ $(LIBS) -o robot robot.o -lsfml-window  -lsfml-graphics -lsfml-system -lsfml-network 
+robot.o: robot.cpp 
+	g++  -c $(INCLUDE) robot.cpp 
+
+9.	Inside the SFML folder there is a folder called lib. Open this folder and right click the address bar and select copy address as text.
+
+10.	Paste the address at the end of the line which says LIBS = -L
+ 
+
+11.	Go back to the SFML folder and open the folder labelled include. Right click on the address bar and click copy address as text
+ 
+12.	Back in the makefile paste that address at the end of the first line
+
+13.	In between “C:” and “Users” there will be a \. Add another \ in both address lines
+
+14.	Save this file by pressing “Control key” and “S” key together. you will know it’s saved because the name at the top of the code will turn black
+
+15.	Click open in the ribbon bar
+ 
+16.	This will open a file explorer, navigate to the AVC_server folder and open the makefile
+ 
+17.	 replace the code in there with this code:
+INCLUDE = -I 
+LIBS = -L 
+server3.exe: server3.o 
+	g++ $(LIBS) -o server3 server3.o -lsfml-window  -lsfml-graphics -lsfml-system -lsfml-network 
+server3.o: server3.cpp 
+	g++  -c $(INCLUDE) server3.cpp 
+ 
+18.	Copy the two lines from the robot make file and replace the top two lines in the server make file so that both of the files have the same include statements.
+ 
+19.	Save the file by pressing Ctrl+S
+20.	Now you are ready to run the code.
