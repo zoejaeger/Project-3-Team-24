@@ -1,6 +1,3 @@
-#include <cstdio>
-FILE _iob[] = {*stdin, *stdout, *stderr};extern "C" FILE * __cdecl __iob_func(void){    return _iob;}  // remove this fix before submitting 
-
 #include "robot.hpp"
 #include "pixel_scanners.hpp"
 #include "complete_red_maze.hpp"
